@@ -10,11 +10,11 @@ const port = 5000;
 app.use(express.json({ limit: '50mb' }));
 
 const db = mysql.createConnection({
-  host: 'bmo0fw8udjc5rzwzhgsv-mysql.services.clever-cloud.com',
-  user: 'ujpsbjf47zw4rncw',
-  password: 'ZzAxCYcaomg2b6pkf7QQ',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
   // password: '2105Oney',
-  database: 'bmo0fw8udjc5rzwzhgsv'
+  database: process.env.DB_DBNAME
 });
 
 db.connect((err) => {
