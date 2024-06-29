@@ -4,7 +4,7 @@ const mysql = require('mysql');
 const cors = require('cors');
 
 const app = express();
-const port = 3306;
+const port = 5000;
 
 // Middleware para analizar el cuerpo de la solicitud en formato JSON
 app.use(express.json({ limit: '50mb' }));
