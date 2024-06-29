@@ -1,0 +1,175 @@
+--------------------------------------------------------------
+Insertar Cliente
+
+curl -X POST -H "Content-Type: application/json" -d "{\"nombre1_cliente\":\"Kenny\",\"nombre2_cliente\":\"Antonio\",\"apellido1_cliente\":\"Tellez\",\"apellido2_cliente\":\"Obando\",\"fechanac_cliente\":\"2004-09-24\",\"telefono_cliente\":\"8334-7188\",\"email_cliente\":\"kenny@gmail.com\",\"contrasena_cliente\":\"incorrecto\"}" http://localhost:5000/crud/create_cliente
+
+Actualizar Cliente
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"nombre1_cliente\":\"Gisela\",\"nombre2_cliente\":\"Paola\",\"apellido1_cliente\":\"Rocha\",\"apellido2_cliente\":\"Cruz\",\"fechanac_cliente\":\"2004-09-21\",\"telefono_cliente\":\"8331-0234\",\"email_cliente\":\"cruzrochagisela@gmail.com\",\"contrasena_cliente\":\"correcto\"}" http://localhost:5000/crud/update_cliente/1
+
+Mostrar Cliente
+
+curl http://localhost:5000/crud/read_cliente
+
+Eliminar Cliente
+curl -X DELETE http://localhost:5000/crud/delete_cliente/1
+
+--------------------------------------------------------------
+Insertar Empleado
+
+curl -X POST -H "Content-Type: application/json" -d "{\"nombre1_empleado\":\"Eliab\",\"nombre2_empleado\":\"Javier\",\"apellido1_empleado\":\"Selva\",\"apellido2_empleado\":\"Cruz\",\"especialidad_empleado\":\"Pedicurista\",\"telefono_empleado\":\"7881-8878\",\"email_empleado\":\"eliabdev@gmail.com\",\"contrasena_empleado\":\"123456\"}" http://localhost:5000/crud/create_empleado
+
+Actualizar Empleado
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"nombre1_empleado\":\"Eliab\",\"nombre2_empleado\":\"Javier\",\"apellido1_empleado\":\"Selva\",\"apellido2_empleado\":\"Cruz\",\"especialidad_empleado\":\"Pedicurista\",\"telefono_empleado\":\"7881-8878\",\"email_empleado\":\"eliabdev@gmail.com\",\"contrasena_empleado\":\"acceder\"}" http://localhost:5000/crud/update_empleado/1
+
+Mostrar Empleado
+
+curl http://localhost:5000/crud/read_empleado
+
+Eliminar Empleado
+
+curl -X DELETE http://localhost:5000/crud/delete_empleado/1
+
+--------------------------------------------------------------
+Insertar Categoria
+
+curl -X POST -H "Content-Type: application/json" -d "{\"nombre_categoria\":\"Bebidas\",\"descripcion_categoria\":\"Zapatos\"}" http://localhost:5000/crud/create_categoria
+
+Actualizar Categoria
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"nombre_categoria\":\"Bebidas\",\"descripcion_categoria\":\"Calzado\"}" http://localhost:5000/crud/update_categoria/1
+
+Eliminar Cateoria
+
+curl -X DELETE http://localhost:5000/crud/delete_categoria/1
+
+--------------------------------------------------------------
+Insertar Proveedor
+
+curl -X POST -H "Content-Type: application/json" -d "{\"empresa_proveedor\":\"XCV\",\"direccion_proveedor\":\"La laguna\",\"ciudad_proveedor\":\"Managua\"}" http://localhost:5000/crud/create_proveedor
+
+Actualizar Proveedor
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"empresa_proveedor\":\"XCV\",\"direccion_proveedor\":\"La laguna\",\"ciudad_proveedor\":\"Managua\"}" http://localhost:5000/crud/update_proveedor/1
+
+Eliminar Proveedor
+
+curl -X DELETE http://localhost:5000/crud/delete_proveedor/1
+
+--------------------------------------------------------------
+Insertar Tipo pago
+
+curl -X POST -H "Content-Type: application/json" -d "{\"tipo\":\"Credito\"}" http://localhost:5000/crud/create_tipo_pago
+
+Actualizar Tipo pago
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"tipo\":\"Tarjeta\"}" http://localhost:5000/crud/update_tipo_pago/1
+
+ELiminar Tipo pago
+
+curl -X DELETE http://localhost:5000/crud/delete_tipo_pago/1
+
+--------------------------------------------------------------
+Insertar Tipo entrega
+
+curl -X POST -H "Content-Type: application/json" -d "{\"id_empleado\":\"1\",\"tipo_entrega\":\"Domicilio\",\"estado_entrega\":\"Entregado\",\"direccion_entrega\":\"por mi casa\"}" http://localhost:5000/crud/create_tipo_entrega
+
+Actualizar Tipo entrega
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"id_empleado\":\"1\",\"tipo_entrega\":\"Domicilio\",\"estado_entrega\":\"Entregado\",\"direccion_entrega\":\"por mi casa\"}" http://localhost:5000/crud/update_tipo_entrega/4
+
+Eliminar Tipo entrega
+
+curl -X DELETE http://localhost:5000/crud/delete_tipo_entrega/1
+
+--------------------------------------------------------------
+Insertar ListaDeseos
+
+curl -X POST -H "Content-Type: application/json" -d "{\"id_cliente\":\"1\",\"fecha_creacion\":\"2023-01-01\"}" http://localhost:5000/crud/create_lista_deseo
+
+Actualizar ListaDeseos
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"id_cliente\":\"1\",\"fecha_creacion\":\"2023-01-01\"}" http://localhost:5000/crud/update_lista_deseo
+
+Eliminar ListaDeseos
+
+curl -X DELETE http://localhost:5000/crud/delete_lista_deseo/1
+
+--------------------------------------------------------------
+Insertar Compra
+
+curl -X POST -H "Content-Type: application/json" -d "{\"id_cliente\":\"1\",\"id_tipo_pago\":\"1\",\"id_entrega\":\"1\",\"fecha_compra\":\"2023-09-09\",\"hora_compra\":\"10:00:00\"}" http://localhost:5000/crud/create_compra
+
+Actualizar Compra
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"id_cliente\":\"1\",\"id_tipo_pago\":\"1\",\"id_entrega\":\"1\",\"fecha_compra\":\"2023-09-09\",\"hora_compra\":\"10:00:00\"}" http://localhost:5000/crud/update_compra/1
+
+Eliminar Compra
+
+curl -X DELETE http://localhost:5000/crud/delete_compra/1
+
+--------------------------------------------------------------
+Insertar Cita
+
+curl -X POST -H "Content-Type: application/json" -d "{\"id_cliente\":\"1\",\"id_empleado\":\"1\",\"tipo_servicio\":\"Pedicura\",\"fecha_cita\":\"2023-09-09\",\"hora_cita\":\"10:00:00\",\"estado_cita\":\"true\",\"comentario\":\"Exelente servicio\"}" http://localhost:5000/crud/create_cita
+
+Actualizar Cita
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"id_cliente\":\"1\",\"id_empleado\":\"1\",\"tipo_servicio\":\"Pedicura\",\"fecha_cita\":\"2023-09-09\",\"hora_cita\":\"10:00:00\",\"estado_cita\":\"true\",\"comentario\":\"Exelente servicio\"}" http://localhost:5000/crud/update_cita/1
+
+Eliminar Cita
+
+curl -X DELETE http://localhost:5000/crud/delete_cita/1
+
+--------------------------------------------------------------
+Insertar Producto
+
+curl -X POST -H "Content-Type: application/json" -d "{\"id_proveedor\":\"1\",\"id_categoria\":\"1\",\"nombre_producto\":\"Zapatos Skate\",\"foto_descriptiva\":\"\",\"precio_venta\":\"150\",\"precio_compra\":\"120\",\"cantidad\":\"2\",\"talla\":\"3\",\"descripcion\":\"Zapatos deportivos negros\",\"genero\":\"M\"}" http://localhost:5000/crud/create_producto
+
+Actualizar Producto
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"id_proveedor\":\"1\",\"id_categoria\":\"1\",\"nombre_producto\":\"Fresco\",\"foto_descriptiva\":\"Imagen\",\"precio_venta\":\"150\",\"precio_compra\":\"120\",\"cantidad\":\"1\",\"talla\":\"3\",\"descripcion\":\"Gaseosa negra\",\"descripcion\":\"Deportivos negra\",\"genero\":\"M\"}" http://localhost:5000/crud/update_producto/1
+
+Eliminar Producto
+
+curl -X DELETE http://localhost:5000/crud/delete_producto/1
+
+--------------------------------------------------------------
+Insertar Detalle compra
+
+curl -X POST -H "Content-Type: application/json" -d "{\"id_compra\":\"1\",\"id_producto\":\"1\",\"cantidad_compra\":\"2\"}" http://localhost:5000/crud/create_detalle_compra
+
+Actualizar Detalle compra
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"id_compra\":\"1\",\"id_producto\":\"1\",\"cantidad_compra\":\"2\"}" http://localhost:5000/crud/update_detalle_compra/2
+
+Eliminar Detalle compra
+
+curl -X DELETE http://localhost:5000/crud/delete_detalle_compra/1
+
+--------------------------------------------------------------
+Insertar ListaDetalle
+
+curl -X POST -H "Content-Type: application/json" -d "{\"id_producto\":\"1\",\"id_deseo\":\"1\"}" http://localhost:5000/crud/create_lista_detalle
+
+Actualizar ListaDetalle
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"id_producto\":\"1\",\"id_deseo\":\"1\"}" http://localhost:5000/crud/update_lista_detalle/1
+
+Eliminar ListaDetalle
+
+curl -X DELETE http://localhost:5000/crud/delete_lista_detalle/1
+
+--------------------------------------------------------------
+Insertar Reseña
+
+curl -X POST -H "Content-Type: application/json" -d "{\"id_cliente\":\"2\",\"id_producto\":\"1\",\"calificacion\":\"4\",\"comentario\":\"Buen producto\",\"fecha_publicacion\":\"2023-02-03\",\"aprovacion\":\"true\"}" http://localhost:5000/crud/create_resena
+
+Actualizar Reseña
+
+curl -X PUT -H "Content-Type: application/json" -d "{\"id_cliente\":\"1\",\"id_producto\":\"1\",\"calificacion\":\"4\",\"comentario\":\"Buen producto\",\"fecha_publicacion\":\"2023-02-03\",\"aprovacion\":\"1\"}" http://localhost:5000/crud/update_resena/1
+
+Eliminar Reseña
+
+curl -X DELETE http://localhost:5000/crud/delete_resena/1
