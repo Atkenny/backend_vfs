@@ -27,11 +27,11 @@ db.connect((err) => {
 
 // Configuración de la conexión a la segunda base de datos
 const db2 = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '@kekodroid',
+  host: process.env.DB_HOST2,
+  user: process.env.DB_USERNAME2,
+  password: process.env.DB_PASSWORD2,
   // password: '2105Oney',
-  database: 'datamart'
+  database: process.env.DB_DBNAME2
 });
 
 db2.connect((err) => {
